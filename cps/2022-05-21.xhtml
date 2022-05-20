@@ -21,7 +21,7 @@
 		<nav class="crumbs">
 			<a class="crumb" href="../">Home</a>
 			<a class="crumb" href="./">CPS</a>
-			<a href="#">2022 May 20</a>
+			<a href="#">2022 May 21</a>
 		</nav>
 		<main>
 			<header>
@@ -37,15 +37,15 @@
 						</tr>
 						<tr>
 							<th>Canonical URL</th>
-							<td><a rel="canonical" href="https://ian.maxwell.name/cps/2002-05-20.xhtml">https://ian.maxwell.name/cps/2002-05-20.xhtml</a></td>
+							<td><a rel="canonical" href="https://ian.maxwell.name/cps/2002-05-21.xhtml">https://ian.maxwell.name/cps/2002-05-21.xhtml</a></td>
 						</tr>
 						<tr>
 							<th>Publication date</th>
-							<td><time pubdate="pubdate" datetime="2022-05-20">2022 May 20</time></td>
+							<td><time pubdate="pubdate" datetime="2022-05-21">2022 May 21</time></td>
 						</tr>
 						<tr>
 							<th>Last updated</th>
-							<td><time datetime="2022-05-20">2022 May 20</time></td>
+							<td><time datetime="2022-05-21">2022 May 21</time></td>
 						</tr>
 						<tr>
 							<th>Current status</th>
@@ -76,7 +76,7 @@
 				accordingly.</p>
 
 				<p>A digital signature for this document may be found here:
-				<a type="application/pgp-signature" href="./2022-05-20.xhtml.sig">[Signature]</a></p>
+				<a type="application/pgp-signature" href="./2022-05-21.xhtml.sig">[Signature]</a></p>
 			</section>
 			
 			<hr />
@@ -85,28 +85,28 @@
 				<h2>Tl;dr</h2>
 				
 				<ul>
-					<li>I only issue 0x10 (<q>generic</q>)
-					certificates, except for cross-certification of my own keys
-					at the 0x13 (<q>positive</q>) level.
-					I will not give you a 0x13 certificate.
-					Please don&#8217;t ask.</li>
+          <li>I only issue 0x10 (<q>generic</q>) certificates.</li>
 					<li>If I&#8217;ve known you for a year or longer by the name in your
-					UID, I will certify it as long as I can verify the email
-					address belongs to you. You will have to meet me in person
-					or by secure video call over an established channel, so
-					I know it&#8217;s really you.</li>
-					<li>If I don&#8217;t know you, or don&#8217;t know you well, we can
-					arrange to meet in person and exchange identifying documents
-					and key fingerprints. In this case I will only certify UIDs
-					if the name field contains your legal name and the address
-          field is one I can verify you control.</li> 
+					  UID, I will certify it as long as I can verify the email
+					  address belongs to you. You will have to meet me in person
+					  or by secure video call over an established channel, so
+					  I know it&#8217;s really you.</li>
+					<li>If I don&#8217;t know you, or don&#8217;t know you well,
+            then your UID must contain your legal name, you must prove
+            this via photo ID, and we will have to meet in person to
+            do this. I will still have to verify the email address is
+            yours.</li>
+          <li>To verify your email address, you&#8217;ll have to demonstrate
+            your ability to apply your key to mail sent to that address,
+            either by signing and returning a specific message sent to it or
+            by receiving an encrypted message sent to it.</li>
 					<li>If I certify your UID, I will also certify your photo UAT
-					provided it contains a recognizable photograph of your face.</li>
-					<li>If you are not a natural person but an organization or
-					group, my critera for certification will be <i>ad hoc</i> but
-					require at a minimum that I have a standing relationship with
-					you in which I have made use of that key in exchanging
-					information with you.</li>
+					  as long as it looks like a photo of you.</li>
+					<li>If you are not an individual person but an organization or
+					  group, my critera for certification will be <i>ad hoc</i> but
+					  require at a minimum that I have a standing relationship with
+					  you in which I have made use of that key in exchanging
+					  information with you.</li>
 				</ul>
 			</section>
 			
@@ -156,12 +156,11 @@
 
 				<p>Note that I do not issue 0x11 (<q>persona</q>) or
 				0x12 (<q>casual</q>) certificates with this key at
-				all, and issue 0x13
-				(<q>positive</q>) certificates only for my own keys. I will
-				not entertain requests to issue certificates at any level other
-				than 0x10. I feel that the proliferation of certificate types,
-				none of them clearly defined and most of them never used,
-				only overcomplicates and sows confusion as to what any
+				all, and issue 0x13) (<q>positive</q>) certificates only for my
+        own keys. I will not entertain requests to issue certificates
+        at any level other than 0x10. I feel that the proliferation of
+        certificate types, none of them clearly defined and most of them
+        never used, only overcomplicates and sows confusion as to what any
 				certificate actually means.</p>
 				
 				<p>At a minimum, by certifying any part of a keyring, I
@@ -205,8 +204,12 @@
 					</li>
 					
 					<li><i>Nonstandard UIDs and UATs:</i>
-						If I certify a UID or UAT that does not match one of the
-						types listed above, I will include a notation of form
+            I do not certify nonstandard UATs, but may be convinced
+            to certify a UID containing no name or mailbox information,
+            provided it contains some falsifiable information about
+            the keyholder <em>and</em> I am also able to certify at
+            least one other, more typical UID for the same key. If I
+            do so, I will include a notation of form
 						<code>cert-explanation@ian.maxwell.name=$VALUE</code>, where
 						the <code>$VALUE</code> field will contain the URL of a
 						document giving the meaning of and justification for
@@ -214,11 +217,12 @@
 					</li>
 				</ul>
 
-        <p>I disregard comments attached to UIDs for purposes of
-        verification, and my certification of a UID that includes
-        a comment expresses no opinion whatsoever about the
-				comment or its veracity.</p>
+        <p>I disregard the comment field for purposes of verification, and
+        my certification of a UID that includes a comment expresses no
+        judgment whatsoever of the comment or its veracity.</p>
       </section>
+
+      <hr />
 
       <section id="process">
         <h2>Certification process</h2>
@@ -274,16 +278,20 @@
               their photo ID, if necessary, and then confirm with me the
               full fingerprint of the key they wish me to certify, as well
 							as which UIDs/UATs they wish me to certify.
+              If I have not already retrieved their public key, I will
+              also ask that they supply me with either the key or a
+              link thereto at this time.
 						</li>
 						<li>
-							During or after our meeting, I will verify control of the
-							key and of each mailbox in one of the following two ways:
+							During or after our meeting (usually after), I will verify
+              control of the key and of each mailbox in one of the following
+              two ways:
 							<ol type="a">
 								<li>
 									If the keyring <em>does not</em> include an
 									encryption-capable key, I will send a <i>challenge</i>
 									to that mailbox in the form of a short statement containing
-                  a randomly generated passphrase, and ask them to reply with
+                  a randomly generated passphrase, and ask them to return
                   that same statement signed with their signing key. Once I
                   receive it and confirm that the signature is valid, I will
                   send the certificate for that UID to the same mailbox.
@@ -339,17 +347,18 @@
 					
 					<p>I do not make any requirement on the choice of algorithm
           or cryptographic strength of a key, in order to certify its
-					associated UIDs. This is for two reasons:</p>
+					associated UIDs. This is for a two reasons:</p>
 					<ol type="1">
 						<li>Fundamentally I believe that one certifies UIDs, not keys.
-							My certification of a UID attests only to the accuracy of
+							My certification of a UID attests only to the truth of
 							the information therein. It does not, and should never be
-							taken to, attest to the security level of the key, and thus
-							my opinion of what constitutes adequate security ought to
-							play no role in my choice of whether to certify.</li>
+							taken to, attest to the security level of the key itself,
+              so my opinion of what constitutes adequate security is
+							irrelevant.</li>
 						<li>In any case, even the weakest asymmetric-key ciphers
 							available in any modern implementation of OpenPGP are strong
-              enough for typical use cases.</li>
+              enough for typical use cases and certainly stronger than
+              not using cryptography at all.</li>
 					</ol>
 				</section>
 				
@@ -414,22 +423,35 @@
         <section id="reciprocity">
           <h3>Reciprocity</h3>
 
-          <p>As a matter of courtesy, if you wish for me to certify
-          your key I will ask that you certify mine as well, according
-          to whatever verification process is typical for you. This
-          is particularly the case if I do not know you well and you
-          are actively soliciting a certificate from me. Usually
+          <p>As a matter of courtesy, if you want me to certify a UID for
+          your key I will ask that you agree to certify mine as well,
+          according to whatever verification process is typical for
+          you. This is particularly the case if I do not know you well
+          and you are actively soliciting a certificate from me. Usually
           it will be most convenient if we both do our verifications
           during the same meeting.</p>
 
-          <p>If you have some reason for being unwilling to do this,
-          I will ask that you disclose it <em>before</em> we arrange
+          <p>If you are for whatever reason unwilling to do this, I
+          expect that you will disclose that <em>before</em> we arrange
           to meet, so that I can decide in advance whether it is worth
           my time to go to the trouble of verifying your identity.
-          I may be willing to accept other considerations in lieu of
+          I may be willing to accept some other consideration in lieu of
           reciprocal certification; feel free to make an offer.</p>
         </section>
+
+        <section id="right-of-refusal">
+          <h3>Right of refusal</h3>
+
+          <p>Nothing in this document constitutes a promise or contract.
+            I reserve the right to refuse certification to anyone, in
+            part or in full, with or without a stated reason, unless
+            I have actually entered a contract stipulating otherwise;
+            and I will not enter any contract in which I agree to
+            certify a UID without due verification.</p>
+        </section>
 			</section>
+
+      <hr />
 			
 			<section>
 				<h2>Document version history</h2>
