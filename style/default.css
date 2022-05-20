@@ -58,6 +58,8 @@ main {
 	background-color: #000F1F;
 	color: #FFDFBF;
 	font-family: Utopia, Palatino, serif;
+	text-align: justify;
+	text-justify: inter-word;
 }
 
 footer {
