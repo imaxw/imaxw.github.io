@@ -1,0 +1,19 @@
+
+	
+.yes {
+	font-weight: bold;
+	text-transform: uppercase;
+	color: lime;
+}
+
+.no {
+	font-weight: bold;
+	text-transform: uppercase;
+	color: red;
+}
+
+.notyet {
+	font-weight: bold;
+	text-transform: uppercase;
+	color: grey;
+}

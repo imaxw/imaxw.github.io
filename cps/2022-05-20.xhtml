@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-us">
+  <head>
+    <title>OpenPGP Key Certification Practice Statement of Ian Maxwell</title>
+    
+    <meta charset="UTF-8" />
+    <meta name="author" content="Ian Maxwell" />
+    <meta name="date" content="2022-05-20" />
+		
+		<link rel="canonical" href="https://ian.maxwell.name/cps/20020520.xhtml" />
+		<link rel="stylesheet" href="/style/default.css" />
+		<link rel="stylesheet" href="/style/cps.css" />
+		<link rel="pgp-signature" href="./20220520.xhtml.sig" />
+	</head>
+
+  <body>
+		<nav class="crumbs">
+			<a class="crumb" href="/">Home</a>
+			<a class="crumb" href="/cps">CPS</a>
+			<a href="">2022 May 20</a>
+		</nav>
+		<main>
+			<header>
+				
+			
+				<h1 class="pagetitle">OpenPGP Key Certification Practice Statement</h1>
+				
+				<table class="metadata">
+					<tbody>
+						<tr>
+							<th>Author</th>
+							<td><a rel="author" href="https://ian.maxwell.name/">Ian Maxwell</a></td>
+						</tr>
+						<tr>
+							<th>Canonical URL</th>
+							<td><a rel="canonical" href="https://ian.maxwell.name/cps/20020520.xhtml">https://ian.maxwell.name/cps/20020520.xhtml</a></td>
+						</tr>
+						<tr>
+							<th>Publication date</th>
+							<td><time pubdate="pubdate" datetime="2022-05-20">2022 May 20</time></td>
+						</tr>
+						<tr>
+							<th>Last updated</th>
+							<td><time datetime="2022-05-20">2022 May 20</time></td>
+						</tr>
+						<tr>
+							<th>Current status</th>
+							<td class="yes">Active</td>
+						</tr>
+					</tbody>
+				</table>
+				
+				<hr />
+			</header>
+
+			<section id="preamble">
+				<p>This document describes the practices that I, Ian Maxwell,
+				follow in issuing digital OpenPGP keyring UID and UAT
+				certifications
+				<ul>
+					<li>using the master key with ID
+						<a type="application/pgp-keys" href="https://keys.openpgp.org/vks/v1/by-fingerprint/75E3D976FB2847D8C71B77307B9F12B9B5EF0DA1">0x7B9F12B9B5EF0DA1</a>,</li>
+					<li>on or after the date of publication of this document,</li>
+					<li>until it has been superseded or obsoleted,</li>
+					<li>whose policy URI packet, if present, contains the
+					canonical URL above.</li>
+				</ul></p>
+				<p>I intend to follow these practices for all OpenPGP key certifications
+				issued on or after the publication date above. In the event this
+				document is superceded or otherwise made obsolete, it will remain in
+				place, but with the <strong>Current status</strong> field above updated
+				accordingly.</p>
+
+				<p>A digital signature for this document may be found here:
+				<a type="application/pgp-signature" href="./2022-05-20.xhtml.sig">(Signature)</a></p>
+			</section>
+			
+			<hr />
+			
+			<section id="summary">
+				<h2>Tl;dr</h2>
+				
+				<ul>
+					<li>I only issue 0x10 (<q>generic</q>)
+					certificates, except for cross-certification of my own keys
+					at the 0x13 (<q>positive</q>) level.
+					I will not give you a 0x13 certificate.
+					Please don't ask.</li>
+					<li>If I've known you for a year or longer by the name in your
+					UID, I will certify it as long as I can verify the email
+					address belongs to you. You will have to meet me in person
+					or by secure video call over an established channel, so
+					I know it's really you.</li>
+					<li>If I don't know you, or don't know you well, we can
+					arrange to meet in person and exchange identifying documents
+					and key fingerprints. In this case I will only certify UIDs
+					if the name field contains your legal name and the address
+					field is one I can verify you control. I will expect you
+					to certify my UIDs as well, provided they meet your
+					criteria.</li>
+					<li>If I certify your UID, I will also certify your photo UAT
+					provided it contains a recognizable photograph of your face.</li>
+					<li>If you are not a natural person but an organization or
+					group, my critera for certification will be <i>ad hoc</i> but
+					require at a minimum that I have a standing relationship with
+					you in which I have made use of that key in exchanging
+					information with you.</li>
+				</ul>
+			</section>
+			
+			<hr />
+
+			<section id="key-security">
+				<h2>Key security</h2>
+
+				<p>So that my certifications can be trusted as genuinely mine,
+				these are the measures I take to maintain exclusive control of
+				my private master key.</p>
+
+				<p>For regular use, my private master key is stored on a
+				<a rel="external" href="https://www.yubico.com/">Yubico</a>-brand
+				smart card, from which it cannot be extracted by any practically
+				feasible means known to me or the general public. This smart
+				card is protected by a strong random PIN which I have memorized and have not written down, nor used for any other purpose.</p>
+
+				<p>A backup copy of this key exists, on an AES-encrypted
+				filesystem on a bootable USB drive containing a live GNU/Linux
+				distribution. After the initial installation and update of this
+				software, the drive has been connected only to an air-gapped
+				computer for the purpose of booting into GNU/Linux to create
+				and access my master key. This USB drive is stored in a locked
+				box when not in use.</p>
+
+				<p>In the event that either my smart card or my backup USB drive
+				is lost, confiscated, or stolen, I will <em>not</em> necessarily
+				consider my key compromised, since it is vanishingly unlikely
+				that anyone would be able to extract my private key from either.
+				For this reason I will likewise <em>not</em> necessarily revoke
+				my key if this happens, but will do so only if I have reason to
+				believe it was taken for the specific purpose of gaining control
+				over my private keys. For the sake of transparency I will state
+				publicly if this ever happens.</p>
+
+				<p>I maintain a <a href="./canary">canary page</a> which I will
+				regularly update, stating that I have never made to certify
+				or sign anything with my master key by duress, for as long as
+				this continues to be the case.</p>
+			</section>
+			
+			<hr />
+
+			<section id="semantics">
+				<h2>Certification semantics</h2>
+				
+				<p>This section describes what I intend a 0x10
+				(<q>generic</q>) certificate to <q>mean</q> when I issue one
+				with this key.</p>
+
+				<p>Note that I do not issue 0x11 (<q>persona</q>) or
+				0x12 (<q>casual</q>) certificates with this key at
+				all, and issue 0x13
+				(<q>positive</q>) certificates only for my own keys. I will
+				not entertain requests to issue certificates at any level other
+				than 0x10. I feel that the proliferation of certificate types,
+				none of them clearly defined and most of them never used,
+				only overcomplicates and sows confusion as to what any
+				certificate actually means.</p>
+				
+				<p>At a minimum, by certifying any part of a keyring, I
+				express that to my knowledge none of the keys thereon had been
+				compromised at the time that signature was made. In addition
+				to this, I express some nonempty subset of the following,
+				depending on the nature of the certified packet:</p>
+				
+				<ul>
+					<li><i>Personal names:</i>
+						By certifying a UID containing the name of a person,
+						I express my high confidence based on personal verification
+						that the name in the UID is the
+						<i>real name</i> of the keyholder. A <i>real name</i>,
+						for purposes of this certification, may be either a legally
+						recognized name or a name by which the person is well-known
+						in a social or professional context, but in any case must
+						be firmly connected to their public identity as a
+						whole.
+					</li>
+					
+					<li><i>Organizational names:</i>
+						By certifying a UID containing the name of a
+						group or organization, I express that the entity named in
+						the UID is known to me, and that with high confidence based
+						on personal verification the key is controlled by a person
+						or persons acting on behalf of that entity.
+					</li>
+					
+					<li><i>Mailboxes:</i>
+						By certifying a UID containing a mailbox address,
+						I express my high confidence based on personal verification
+						that the mailbox is owned by or delegated
+						to the keyholder.
+					</li>
+					
+					<li><i>Comments:</i>
+						I disregard the contents of the comment field for purposes
+						of certification, and my certification of a UID containing
+						a comment expresses nothing regarding the veracity
+						of the comment.
+					</li>
+					
+					<li><i>Images:</i>
+						By certifying a UAT containing an image, I indicate that
+						the image is an accurate photorealistic representation
+						of the individual who holds the key.
+					</li>
+					
+					<li><i>Nonstandard UIDs and UATs:</i>
+						If I certify a UID or UAT that does not match one of the
+						types listed above, I will include a notation of form
+						<code>cert-explanation@ian.maxwell.name=$VALUE</code>, where
+						the <code>$VALUE</code> field will contain the URL of a
+						document giving the meaning of and justification for
+						that certificate.
+					</li>
+				</ul>
+			</section>
+				
+			<section id="process">
+				<h2>Certification process</h2>
+				
+				<p>This section describes the process by which I will verify
+				and certify UIDs and image UATs.</p>
+				
+				<section>
+					<h3>Keys belonging to individuals</h3>
+					
+					<p>In order for me to certify any part of a keyring
+					belonging to an individual person, all of the following must
+					be true.</p>
+					<ol type="1">
+						<li>
+							The keyring must contain at least one signing-capable
+							key or one encryption-capable key.
+						</li>
+						<li>
+							The keyring must contain at least one UID with a
+							non-empty name field, and at least one UID with a
+							mailbox address. (These need not be the same UID.)
+						</li>
+						<li>
+							I must either have known the person for a minimum of one
+							year by the name in the UID, <em>or</em> they must have
+							and be willing to furnish a government-issued photo ID,
+							such as a driver's license, state identification card, or
+							passport. I reserve the right to require ID
+							at my discretion even for individuals whom I know.
+						</li>
+						<li>
+							The person must be willing to meet with me in person,
+							<em>or,</em> for those with whom I have an existing
+							relationship and already know their telephone number,
+							via video call though the Signal messenger app.
+						</li>
+					</ol>
+					
+					<p>To verify and certify the UID(s) on a person's
+					keyring, I will take the following steps:</p>
+					
+					<ol type="1">
+						<li>
+							We will meet in person, <em>or,</em> for those with whom I
+							have an existing relationship and already know their
+							telephone number, may do so via video call though the
+							Signal messenger app.
+						</li>
+						<li>
+							I will ask the person to Show me their photo ID, if
+							necessary, and then confirm with me the full
+							fingerprint of the key they wish me to certify, as well
+							as which UIDs/UATs they wish me to certify.
+						</li>
+						<li>
+							During or after our meeting, I will verify control of the
+							key and mailbox in one of the following two ways:
+							<ol type="a">
+								<li>
+									If the keyring <em>does not</em> include an
+									encryption-capable key, I will send a <i>challenge</i>
+									to that mailbox in the form of a bit of random
+									data, and ask them to mail back that same data signed
+									with their signing key. Once I receive it, I will send
+									the certificate for that UID to the same mailbox.
+								</li>
+								<li>
+									If the keyring <em>does</em> include an
+									encryption-capable key, I will simply send the
+									certificate for each UID to the corresponding mailbox
+									via an email encrypted to that key. In this way the
+									person will prove their ownership of the mailbox by
+									being able to receive and decrypt the certificate to
+									make use of it.
+								</li>
+							</ol>
+						</li>
+						<li>
+							For image UATs, and for UIDs containing only a name, I
+							will send certificates for these alongside those for
+							the mailboxes I certify.
+						</li>
+						<li>
+							For nonstandard UIDs, I will work out some variant of
+							the proof protocol for mailboxes that logically
+							establishes control of the resource named in the UID,
+							and carry that out. In this case I will still only deliver
+							the certificate to a mailbox specified in a UID attached
+							to the keyring, unless the person has already proven
+							control of one such mailbox to my satisfaction, in which
+							case I may release it by whatever means we can agree
+							upon.
+						</li>
+					</ol>
+				</section>
+				
+				<section>
+					<h3>Keys belonging to organizations</h3>
+					
+					<p>I have no fixed process for certifying keys belonging to
+					groups or organizations. I will certify these on an
+					<i>ad hoc</i> basis for organizations with which I have a
+					standing relationship in which I have made use of those
+					keys.</p>
+				</section>
+			</section>
+			
+			<hr />
+
+			<section id="other-considerations">
+				<h2>Other considerations</h2>
+				
+				<section id="cryptographic-security-requirements">
+					<h3>Cryptographic security requirments</h3>
+					
+					<p>I do not make any requirement on the choice of algorithm or cryptographic strength of a key, in order to certify its
+					associated UIDs. This is for two reasons:</p>
+					<ol type="1">
+						<li>Fundamentally I believe that one certifies UIDs, not keys.
+							My certification of a UID attests only to the accuracy of
+							the information therein. It does not, and should never be
+							taken to, attest to the security level of the key, and thus
+							my opinion of what constitutes adequate security ought to
+							play no role in my choice of whether to certify.</li>
+						<li>In any case, even the weakest asymmetric-key ciphers
+							available in any modern implementation of OpenPGP are strong enough for most practical purposes.</li>
+					</ol>
+				</section>
+				
+				<section id="recertification">
+					<h3>Recertification</h3>
+					
+					<p>If you have a new master key and I have previously
+					 certified at least one UID under your old one, I will
+					 generally be willing to certify any identical UIDs under the
+					 new one, by an expedited process. This assumes you are
+					 still able to use the old key; if not, we will have to start
+					 over again.</p>
+					 
+					<ol type="1">
+						<li>Send me, or point me to, a
+						<b>key transition statement</b>: a message, signed
+						with both your old and new keys, stating that the old key
+						is superceded by the new one. Include in the message
+						a copy of, or a URL for, your new public key.</li>
+						<li>I will certify all UIDs on the new key that match those
+						I have already certified for the old, and send those
+						certifications to you in the same manner I did before.</li>
+					</ol>
+					
+					<p>In the event that your name changes, I will certify new
+					UIDs under your new name provided you provide me in person
+					with legal documentation of the name change, or if I know you well personally and know you to be going by the new name in
+					general. In this case I will not require recertification of
+					existing mailboxes and can provide you with the certificate
+					by whatever means you prefer.</p>
+					
+					<p>In the event that you have a new email (or other)
+					address, no expedited process is available for certifying the
+					corresponding UID. This is because I would still require an
+					in-person or secure video meetup for you to confirm your
+					key has not been compromised, which together with the
+					verification of your address makes up the bulk of my
+					certification process anyway.</p>
+				</section>
+			</section>
+			
+			<section>
+				<h2>Document version history</h2>
+				
+				<p>This section contains a dated list of changes that have
+				been made to this document since its original publication.
+				These changes are only changes of wording or clarifications; in
+				the event that I make a substantial change to my policy,
+				I will update this document only to mark it as superceded
+				and point to its replacement.</p>
+				
+				<p><i>No changes have yet been made to this document since its
+				publication.</i></p>
+			</section>
+		</main>
+		
+		<footer>
+			<hr />
+			<details>
+				<summary>Other sites</summary>
+				<a rel="me" href="https://keybase.io/imaxw">Keybase</a>
+				<a rel="me" href="https://mastodon.sdf.org/@im">Mastodon</a>
+				<a rel="me" href="https://www.facebook.com/imaxw">Facebook</a>
+			</details>
+
+			<details>
+				<summary>Contact</summary>
+				<a rel="me" href="mailto:ian@maxwell.name">Email</a>
+				| <a rel="me" href="xmpp:im@jabber.sdf.org">XMPP</a>
+			</details>
+			
+			<a href="/pubkey/default.asc">OpenPGP public key</a>
+		</footer>
+  </body>
+</html>
+
