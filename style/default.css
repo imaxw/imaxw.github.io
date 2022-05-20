@@ -1,0 +1,158 @@
+/* Simple, light-on-dark stylesheet. */
+   
+html {
+	background-color: #323651;
+	background-image: url(./img/blue-canvas.jpeg);
+	
+}
+
+body {
+	margin: 0 5% 0 5%;
+	text-shadow: #000000 1px 1px 1px;
+}
+
+.crumbs {
+	position: fixed;
+	overflow: hidden;
+	left: 0;
+	top: 0;
+	right: 0;
+	padding: 6pt 10pt 10pt 10pt;
+	height: 10pt;
+	vertical-align: center;
+	font-size: 10pt;
+	background-color: black;
+	color: white;
+	border-bottom: 2px outset black;
+	z-index: 1;
+	font-weight: bold;
+	font-family: Utopia, Palatino, serif;
+}
+
+.crumb {
+	display: inline-block;
+}
+
+.crumb::after {
+	display: inline-block;
+	content: '\25B6';
+	font-size: 50%;
+	color: white;
+	font-weight: bold;
+	padding: 0px 4px 0px 6px;
+}
+
+h1.pagetitle {
+	position: absolute;
+	top: 30pt;
+	left: 5%;
+	color: #FFFFFF;
+	z-index: 0;
+	font-size: 28pt;
+}
+
+main {
+	margin: 100pt 0 40px 0;
+	border: 5px inset #001F3F;
+	padding: 40px;
+	background-color: #000F1F;
+	color: #FFDFBF;
+	font-family: Utopia, Palatino, serif;
+}
+
+footer {
+	font-size: small;
+	font-weight: bold;
+	text-align: center;
+	color: #DFDFDF;
+	font-family: Helvetica, sans-serif;
+	max-width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 50px;
+	line-height: 1.5;
+}
+
+code {
+	font-family: Courier New, Courier, monospace;
+	font-weight: bold;
+	color: white;
+}
+
+img {
+	margin: 2px;
+	border: 2px outset #002244;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	color: #33AAFF;
+	text-shadow: #000000 3px 3px 3px;
+}
+
+h1,h2,h3 {
+	font-variant: small-caps;
+}
+
+a:link {
+	color: #FFAA66;
+}
+
+a:hover {
+	color: #FFAA00;
+}
+
+a:visited {
+	color: #996633;
+}
+
+hr {
+	border: 1px outset grey;
+	margin: 30px 20px 30px 20px;
+}
+
+
+header > hr {
+	margin: 50px 20px 50px 20px;
+}
+
+footer > hr {
+	margin: 30px 20px 20px 20px;
+}
+
+footer > 
+
+strong {
+	color: #FFFFFF;
+}
+
+table.metadata {
+	align-content: center;
+	padding: 16px;
+	background-color: #0F0F0F;
+	border: 5px ridge grey;
+	border-collapse: separate;
+	border-spacing: 10px 0px;
+	font-family: Courier New, Courier, monospace;
+	font-size: 110%;
+}
+
+.metadata th {
+	padding: 0px 5px;
+	font-weight: bold;
+	text-align: right;
+	color: white;
+}
+
+.metadata td {
+	padding: 5px 0px;
+	text-align: left;
+}
+
+main ul li {
+	padding: 2pt;
+}
+
+main ol li {
+	padding: 2pt;
+}
+	
