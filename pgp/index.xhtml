@@ -22,21 +22,19 @@
 		<main>
 			<h1 class="pagetitle">PGP stuff</h1>
 			
-			<p>If you just want my current general-use public keyring, here it is:
-				<a href="https:/ian.maxwell.com/pgp/key/default.asc">[Keyring]</a></p>
+			<p>If you just want my current general-use public key, here it is:
+				[<a href="https:/ian.maxwell.com/pgp/key/default.asc">Key</a>]</p>
 			
 			<p>If you have no idea what PGP is, come back once I’ve written my FAQ.
 			  I’m reluctant to point you to someone else’s because they tend to
-				propagandize the use of it, as opposed to giving a balanced account of
-				what it is and isn’t good for.</p>
+				be written to promote its use, whereas my opinion of OpenPGP and its
+				implementations and infrastructure is more… mixed.</p>
 			
-			<section id="my-keys">
+			<section>
 				<h2>My keys</h2>
 				
-				<p>Here’s a list of all OpenPGP keys created by me or in my name,
-				and their status. Note that the following link will always point
-				to my <em>current</em> key:
-				<a href="./key/default.asc">/pgp/key/default.asc</a></p>
+				<p>Here’s a list of all OpenPGP keys released in my name,
+				and their status.</p>
 				
 				<ul>
 					<details>
@@ -44,61 +42,68 @@
 							<a href="./key/7B9F12B9B5EF0DA1.asc">7B9F12B9B5EF0DA1</a>:
 							<span class="good">Active</span>
 						</summary>
-						<p>This is my current keyring, used for pretty much all purposes. I
-						finally have a master key secured well enough that I don’t expect
-						to ever worry about it, and therefore have no expiration date on it.
-						I do have an expiration date on the subkeys since I intend to
-						regularly rotate them to obtain some measure of forward security.</p>
+						<p>This is my current personal-use key, which I generated in 2022
+						and use for pretty much everything I use PGP for. I finally have
+						a master key secured well enough that I don’t expect to ever worry
+						about it, and therefore have set it to never expire. I do have an
+						expiration date for the subkeys since I intend to regularly rotate
+						them to obtain some measure of forward security.</p>
 						<p>If you want to communicate with me using PGP, this is the key
-						you should use unless I have instructed you otherwise.</p>
+						you should use unless I’ve personally instructed you otherwise.</p>
 					</details>
 					<br />
 					<details>
 						<summary>
-							91A835DAC5689324: <span class="bad">Do not use</span>
+							91A835DAC5689324: <span class="bad">Compromised</span>
 						</summary>
-					  <p>I created this keyring for work, on an office computer I didn’t
-						own, and never used it for anything. I no longer have any access to
-						the private key. I don’t expect that you will ever see anything
-						signed with it, and if you do you shouldn’t trust it.</p>
+					  <p>I created this key for work at my previous job, on an office
+						computer I didn’t own, and never used it for anything. I no longer
+						have any access to the private key, and while it was probably just
+						erased I cannot rule out that someone might have kept a copy.</p>
+						<p>Don’t use this key for encryption, don’t trust anything signed
+						with it, and please alert me if you do ever see something signed
+						with it.</p>
 					</details>
 					<br />
 					<details>
 						<summary>
 							<a href="./key/51AB6B04EA6C3A35.asc">51AB6B04EA6C3A35</a>:
-							<span class="okay">Retired</span>
+							<span class="okay">Superseded</span>
 						</summary>
-					  This is my previous keyring, which I created when the one I created in
+					  This is my previous key, which I created when the one I created in
 						2011 was close to expiration and I felt it was time to replace it.
 						After creating it I felt that using NIST curve ECC was possibly
 						a poor choice, and also that I ought to have better security for my
 						master key than I had previously practiced, so I decided to let it
 						expire but did not get around to creating a new key until 2022. I
-						have barely used this keyring at all, and you shouldn’t use it to send
-						me anything, but in case you find an old signed document from me
-						you may still find it useful to retrieve it.
+						have barely used this key at all, and you shouldn’t use it either,
+						but in case you find an old signed document from me you may still
+						find it useful to retrieve it.
 					</details>
 					<br />
 					<details>
 						<summary>
 							<a href="./key/73B68566BFBC8D95.asc">73B68566BFBC8D95</a>:
-							<span class="okay">Retired</span>
+							<span class="okay">Superceded</span>
 						</summary>
 					  <p>I created this 4096-bit RSA key in 2011, and it is still the
 						most-used of any of my keys, as well as the most-signed, having made
 						it into the so-called <q>strong set</q> when I attended a
 						key-signing event in 2013.</p>
-						<p>I made a number of poor decisions with this keyring due to
+						<p>I made a number of questionable decisions with this key due to
 						inexperience. One of these was generating a single master key to be
 						used for all purposes, which necessitated copying my private master
 						key to every device on which I wanted to sign or decrypt anything.
 						Another was that I used it to a lot of other keys based on very
 						weak verification, and so certifications made with it before 2013
-						should not necessarily be trusted. It’s also <em>huge</em> and
-						the version of it available on old SKS keyservers has many redundant
-						self-signatures due to my misunderstanding of how keyservers worked
-						when I was managing it. Still, it did the job I needed it to do.</p>
-						<p>I have retired this keyring, and keep the private key only on
+						should not necessarily be trusted. A third was backing it up to
+						a cloud storage service, trusting in the security of the passphrase
+						itself (which, to be fair, is and always was quite strong).
+						It’s also <em>ridiculously huge</em> and the version of it available
+						on old SKS keyservers has many redundant self-signatures due to my
+						misunderstanding of how keyservers worked when I was managing it.
+						Still, it did the job I needed it to do.</p>
+						<p>I have retired this key, and keep the private key only on
 						a secure encrypted backup in case I find some old backed-up data
 						that I need to decrypt. I am still making the public key available
 						in case you need it to verify a signature on an old document or
@@ -115,15 +120,14 @@
 						the insecurity of relying on short (32-bit) key IDs, Richard
 						Klafter and Eric Swanson created and published the
 						<a href="https://evil32.com">Evil32</a> archive containing short-ID lookalikes for the entire PGP strong set. Unfortunately, someone
-						then released all of these lookalikes onto the public keyservers.
-						Mr. Swanson was considerate enough to upload revocations for all
-						of these keys to minimize the damage, but the revoked key does
-						remain available.</p>
+						then released all of these lookalikes onto the public keyservers,						where they remain today. Mr. Swanson was considerate enough to
+						push revocations for all of these keys to minimize the damage,
+						but the revoked key does remain available.</p>
 						<p>I have no criticism for these researchers, who rightly gave
 						a public demonstration of a major security flaw in existing PGP
 						implementations. And it was probably inevitable that someone would
-						be trollish enough to upload the proof-of-concept keys to an SKS
-						keyserver, so while it’s annoying I can’t really get too worked up
+						be trollish enough to upload the proof-of-concept keys to the SKS
+						pool, so while it’s annoying I can’t really get too worked up
 						about it. I am disappointed only in the SKS infrastructure itself, a
 						dinosaur of a system which is fundamentally flawed in its
 						willingness to accept and redistribute arbitrary uploads without
@@ -131,19 +135,41 @@
 						flaw was ultimately SKS’ undoing, years later.</p>
 					</details>
 					<br />
+					<details>
+						<summary>
+							BAE750AFCC56CAC9, 50EA36F4DCA42F7B:
+							<span class="bad">Lol</span>
+						</summary>
+					  <p>I created these keys in 2003 when I first got curious about
+						cryptography, had no idea how to use them, but somehow managed to
+						push them to the SKS pool before I presumably wiped them from
+						existence the next time I did something dumb with my computer.
+						On the one hand, I wish I could scrub them from the keyservers;
+						on the other, they are the only reason I still have a copy of my
+						<span class="tooltip">
+							<img class="tooltiptext" src="/img/yearbook.jpg" alt="" />
+							high school yearbook photo
+						</span>,
+						which I included as a UAT.</p>
+						<p>I don’t really need to tell you not to use these, since they
+						don’t have encryption subkeys anyway, but I can at least tell you
+						not to bother importing them if you find them somewhere.</p>
+					</details>
+					<br />
 				</ul>
 			</section>
 			
-			<section id="cps">
+			<section>
 				<h2>Certification practice statements</h2>
 
-				<p>Despite my skepticism that the web of trust actually works, I am
-				in general willing to certify people’s public keys subject to identity
-				verification. This is a list of all certification practice statements I
-				have issued for my OpenPGP keys. Whenever I make a significant change
-				to my policy, I will supercede the currently active document rather than
-				replacing it, so that it is clear not only what my policy is now but
-				what it was at any time in the past.</p>
+				<p>From time to time I certify the keys of others; these documents
+				(well, this one document for now) explain what exactly I am certifying
+				when I do so, and my criteria and process for certification.</p>
+				
+				<p>Whenever I make a significant change to my policy, my plan is to
+				mark my existing CPS as superceded and put up a new one, rather than
+				replacing it, so that it remains clear not only what my policy is now
+				but what it was for any keys I have signed in the past.</p>
 
 				<table id="cpslist">
 					<thead>
@@ -159,7 +185,7 @@
 							<td><time datetime="2022-05-21">2022 May 21</time></td>
 							<td><a href="/pgp/key/7B9F12B9B5EF0DA1.asc">0x7B9F12B9B5EF0DA1</a></td>
 							<td class="good">Active</td>
-							<td><a href="./2022-05-21.xhtml">./2022-05-21.xhtml</a></td>
+							<td><a href="./cps-2022-05-21.xhtml">./cps-2022-05-21.xhtml</a></td>
 						</tr>
 					</tbody>
 				</table>

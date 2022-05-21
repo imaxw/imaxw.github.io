@@ -1,4 +1,5 @@
-   
+@import "./tooltips.css";
+
 html {
 	background-color: #323651;
 	background-image: url(/img/blue-canvas.jpeg);
@@ -32,12 +33,13 @@ body {
 
 .crumb {
 	display: inline-block;
+	vertical-align: center;
 }
 
 .crumb::after {
 	display: inline-block;
 	content: '\25B6';
-	font-size: 50%;
+	font-size: 60%;
 	color: white;
 	font-weight: bold;
 	padding: 0px 4px 0px 6px;
@@ -57,12 +59,13 @@ h1.pagetitle {
 main {
 	margin: 100pt 0 3pt 0;
 	border: 5px inset #0F1F3F;
-	padding: 2em;
+	padding: 2.5em;
 	background-color: #000F1F;
 	color: #FFDFBF;
 	font-family: Utopia, Palatino, serif;
 	text-align: justify;
 	text-justify: inter-word;
+	line-height: 1.3;
 }
 
 footer {
@@ -139,7 +142,7 @@ table.metadata {
 	border-spacing: 1em 0;
 	font-family: Courier New, Courier, monospace;
 	font-size: 90%;
-	line-height: 1.5;
+	line-height: 1.2;
 }
 
 .metadata th {
@@ -194,8 +197,6 @@ tbody th, tbody td {
 th {
 	font-weight: bold;
 }
-
-
 .good {
 	font-weight: bold;
 	text-transform: uppercase;

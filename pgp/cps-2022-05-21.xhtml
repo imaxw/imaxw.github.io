@@ -3,11 +3,11 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-us">
 	<head>
-		<title>OpenPGP Certification Practice Statement of Ian Maxwell</title>
+		<title>OpenPGP Certification Practice Statement of Ian Maxwell, 2022 May 21</title>
 		
 		<meta charset="UTF-8" />
 		<meta name="author" content="Ian Maxwell" />
-		<meta name="description" content="This document describes the process by which Ian Maxell will certify other OpenPGP keys, effective 2022 May 21." />
+		<meta name="description" content="This document describes the process by which Ian Maxwell will certify other OpenPGP keys, effective 2022 May 21." />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		
 		<link rel="canonical" href="https://ian.maxwell.name/pgp/cps-2022-05-21.xhtml" />
@@ -18,7 +18,7 @@
 		<nav class="crumbs">
 			<a class="crumb" href="/">Home</a>
 			<a class="crumb" href="/pgp/">PGP</a>
-			CPS 2022-05-21
+			Certification Practice Statement (2022-05-21)
 		</nav>
 		<main>
 			<header>
@@ -34,7 +34,7 @@
 						</tr>
 						<tr>
 							<th>Canonical URL</th>
-							<td><a rel="canonical" href="https://ian.maxwell.name/pgp/cps/2022-05-21.xhtml">https://ian.maxwell.name/pgp/cps/2022-05-21.xhtml</a></td>
+							<td><a rel="canonical" href="https://ian.maxwell.name/pgp/cps-2022-05-21.xhtml">https://ian.maxwell.name/pgp/cps-2022-05-21.xhtml</a></td>
 						</tr>
 						<tr>
 							<th>Publication date</th>
@@ -54,31 +54,28 @@
 				<hr />
 			</header>
 
-			<section id="preamble">
-				<p>This document describes the practices that I, Ian Maxwell, will
-				follow in issuing digital OpenPGP keyring UID and UAT
-				certifications
-				<ul>
-					<li>using the master key with ID
-						<a type="application/pgp-keys" href="https://keys.openpgp.org/vks/v1/by-fingerprint/75E3D976FB2847D8C71B77307B9F12B9B5EF0DA1">0x7B9F12B9B5EF0DA1</a>,</li>
-					<li>on or after the date of publication of this document,</li>
-					<li>until it has been superseded or obsoleted,</li>
-					<li>whose policy URI packet, if present, contains the
-					canonical URL above.</li>
-				</ul></p>
-				<p>I intend to follow these practices for all certifications
-				issued on or after the publication date above. In the event this
-				document is superceded or otherwise made obsolete, it will remain in
-				place, but with the <strong>Current status</strong> field above updated
-				accordingly.</p>
+			<p>This document describes the practices that I, Ian Maxwell, will
+			follow in issuing digital OpenPGP UID and UAT certifications
+			<ul>
+				<li>using the master key with ID
+					<a type="application/pgp-keys" href="https://keys.openpgp.org/vks/v1/by-fingerprint/75E3D976FB2847D8C71B77307B9F12B9B5EF0DA1">0x7B9F12B9B5EF0DA1</a>,</li>
+				<li>on or after the date of publication of this document,</li>
+				<li>until it has been superseded or obsoleted,</li>
+				<li>whose policy URI packet, if present, contains the
+				canonical URL above.</li>
+			</ul></p>
+			<p>I intend to follow these practices for all certifications
+			issued on or after the publication date above. In the event this
+			document is superceded or otherwise made obsolete, it will remain in
+			place, but with the <strong>Current status</strong> field above updated
+			accordingly.</p>
 
-				<p>A digital signature for this document may be found here:
-				<a type="application/pgp-signature" href="./2022-05-21.xhtml.sig">[Signature]</a></p>
-			</section>
+			<p>A digital signature for this document may be found here:
+			[<a type="application/pgp-signature" href="./cps-2022-05-21.xhtml.sig">Signature</a>]</p>
 			
 			<hr />
 			
-			<section id="summary">
+			<section>
 				<h2>Tl;dr</h2>
 				
 				<ul>
@@ -109,7 +106,7 @@
 			
 			<hr />
 
-			<section id="key-security">
+			<section>
 				<h2>Key security</h2>
 
 				<p>So that my certifications can be trusted as genuinely mine,
@@ -144,7 +141,7 @@
 			
 			<hr />
 
-			<section id="semantics">
+			<section>
 				<h2>Certification semantics</h2>
 				
 				<p>This section describes what I intend a 0x10
@@ -160,7 +157,7 @@
 				never used, only overcomplicates and sows confusion as to what any
 				certificate actually means.</p>
 				
-				<p>At a minimum, by certifying any part of a keyring, I
+				<p>At a minimum, by certifying anything attached to a key, I
 				express that to my knowledge none of the keys thereon had been
 				compromised at the time that signature was made. In addition
 				to this, I express one or more of the following assertions,
@@ -221,7 +218,7 @@
 
 			<hr />
 
-			<section id="process">
+			<section>
 				<h2>Certification process</h2>
 				
 				<p>This section describes the process by which I verify
@@ -230,16 +227,17 @@
 				<section>
 					<h3>Keys belonging to individuals</h3>
 					
-					<p>In order for me to certify any part of a keyring
+					<p>In order for me to certify anything attached to a key
 					belonging to an individual person, all of the following must
 					be true.</p>
 					<ol type="1">
 						<li>
-							The keyring must contain at least one signing-capable
-							key or one encryption-capable key.
+							The key must have at least one signing-capable subkey or one
+							encryption-capable subkey (or be signing- or encryption-capable
+							itself).
 						</li>
 						<li>
-							The keyring must contain at least one UID with a
+							The key must have at least one UID with a
 							non-empty name field, and at least one UID with a
 							mailbox address, or some address capable of receiving and
 							sending private messages.
@@ -261,8 +259,8 @@
 						</li>
 					</ol>
 					
-					<p>To verify and certify the UID(s) on a person’s
-					keyring, I will take the following steps:</p>
+					<p>To verify and certify the UID(s) for a person’s key, I will take
+						the following steps:</p>
 					
 					<ol type="1">
 						<li>
@@ -285,22 +283,19 @@
 							two ways:
 							<ol type="a">
 								<li>
-									If the keyring <em>does not</em> include an
-									encryption-capable key, I will send a <i>challenge</i>
-									to that mailbox in the form of a short statement containing
-									a randomly generated passphrase, and ask them to return
-									that same statement signed with their signing key. Once I
-									receive it and confirm that the signature is valid, I will
-									send the certificate for that UID to the same mailbox.
+									If the key <em>is not</em> encryption-capable, I will send a
+									<dfn>challenge</dfn> to that mailbox in the form of a short
+									statement containing a randomly generated code, and ask them
+									to return that same statement signed with their key.
+									Once I receive it and confirm that the signature is valid,
+									I will send the certificate for that UID to the same mailbox.
 								</li>
 								<li>
-									If the keyring <em>does</em> include an
-									encryption-capable key, I will simply send the
-									certificate for each UID to the corresponding mailbox
-									via an email encrypted to that key. In this way the
-									person will prove their ownership of the mailbox by
-									being able to receive and decrypt the certificate to
-									make use of it.
+									If the key <em>is</em> encryption-capable, I will simply
+									send the certificate for each UID to the corresponding
+									mailbox, encrypted. In this way the person will prove their
+									ownership of the mailbox and key by eing able to receive and
+									decrypt the certificate to make use of it.
 								</li>
 							</ol>
 						</li>
@@ -315,7 +310,7 @@
 							establishes control of the resource named in the UID,
 							and carry that out. In this case I will still only deliver
 							the certificate to a mailbox specified in a UID attached
-							to the keyring, unless the person has already proven
+							to the key, unless the person has already proven
 							control of one such mailbox to my satisfaction, in which
 							case I may release it by whatever means we can agree
 							upon.
@@ -336,22 +331,22 @@
 			
 			<hr />
 
-			<section id="other-considerations">
+			<section>
 				<h2>Other considerations</h2>
 				
-				<section id="cryptographic-security-requirements">
+				<section>
 					<h3>Cryptographic security requirments</h3>
 					
 					<p>I do not make any requirement on the choice of algorithm
 					or cryptographic strength of a key, in order to certify its
-					associated UIDs. This is for a two reasons:</p>
+					associated UIDs. This is for two reasons:</p>
 					<ol type="1">
-						<li>Fundamentally I believe that one certifies UIDs, not keys.
-							My certification of a UID attests only to the truth of
-							the information therein. It does not, and should never be
-							taken to, attest to the security level of the key itself,
-							so my opinion of what constitutes adequate security is
-							irrelevant.</li>
+						<li>Fundamentally I am certifying UIDs, not keys.
+							My certification attests only to the truth of
+							the information in the UID to which it is issued. It does not,
+							and should never be taken to, attest to the security level
+							of the key itself, so my opinion of what constitutes adequate
+							security is irrelevant.</li>
 						<li>In any case, even the weakest asymmetric-key ciphers
 							available in any modern PGP implementation are strong
 							enough for typical use cases and certainly stronger than
@@ -359,7 +354,7 @@
 					</ol>
 				</section>
 				
-				<section id="recertification">
+				<section>
 					<h3>Recertification</h3>
 					
 					<p>If you have a new master key and I have previously
@@ -397,7 +392,7 @@
 					certification process anyway.</p>
 				</section>
 
-				<section id="revocation">
+				<section>
 					<h3>Revocation</h3>
 
 					<p>I will revoke all certifications I have made on a key if I
@@ -417,7 +412,7 @@
 						own web space and on multiple keyservers.</p>
 				</section>
 
-				<section id="reciprocity">
+				<section>
 					<h3>Reciprocity</h3>
 
 					<p>As a matter of courtesy, if you want me to certify a UID for
@@ -436,7 +431,7 @@
 					reciprocal certification; feel free to make an offer.</p>
 				</section>
 
-				<section id="right-of-refusal">
+				<section>
 					<h3>Right of refusal</h3>
 
 					<p>Nothing in this document constitutes a promise or contract.
@@ -455,10 +450,11 @@
 				
 				<p>This section contains a dated list of changes that have
 				been made to this document since its original publication.
-				These changes are only changes of wording or clarifications; in
-				the event that I make a substantial change to my policy,
-				I will update this document only to mark it as superceded
-				and point to its replacement.</p>
+				These changes are only clarifications, rewordings, or
+				corrections to obvious errors, and not intended to change what is
+				communicated by the document. If I make a substantial
+				change to my policy, I will not modify this document except to
+				mark it as superceded with a pointer to its replacement.</p>
 				
 				<table>
 					<thead>

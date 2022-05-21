@@ -1,0 +1,20 @@
+
+
+main { counter-reset: s -1; }
+section h2 + * { counter-reset: ss 0; }
+section h3 + * { counter-reset: sss 0; }
+
+section h2:before {
+	counter-increment: s;
+	content: counter(s) ". ";
+}
+
+section h3:before {
+	counter-increment: ss;
+	content: counter(s) "." counter(ss) " ";
+}
+
+section h4:before {
+	counter-increment: sss;
+	content: counter(s) "." counter(ss) "." counter(sss) " ";
+}
