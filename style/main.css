@@ -1,13 +1,13 @@
-/* Simple, light-on-dark stylesheet. */
    
 html {
 	background-color: #323651;
 	background-image: url(/img/blue-canvas.jpeg);
-	
 }
 
 body {
-	margin: 0 5% 0 5%;
+	width: calc(100% - 4em);
+	max-width: 50em;
+	margin: auto;
 	text-shadow: #000000 1px 1px 1px;
 }
 
@@ -17,7 +17,7 @@ body {
 	left: 0;
 	top: 0;
 	right: 0;
-	padding: 6pt 10pt 10pt 10pt;
+	padding: 10px 10px 15px 10px;
 	height: 10pt;
 	vertical-align: center;
 	font-size: 10pt;
@@ -27,6 +27,7 @@ body {
 	z-index: 1;
 	font-weight: bold;
 	font-family: Utopia, Palatino, serif;
+	white-space: nowrap;
 }
 
 .crumb {
@@ -49,12 +50,14 @@ h1.pagetitle {
 	color: #FFFFFF;
 	z-index: 0;
 	font-size: 28pt;
+	white-space: nowrap;
+	
 }
 
 main {
-	margin: 100pt 0 40px 0;
-	border: 5px inset #001F3F;
-	padding: 40px;
+	margin: 100pt 0 3pt 0;
+	border: 5px inset #0F1F3F;
+	padding: 2em;
 	background-color: #000F1F;
 	color: #FFDFBF;
 	font-family: Utopia, Palatino, serif;
@@ -79,11 +82,12 @@ code {
 	font-family: Courier New, Courier, monospace;
 	font-weight: bold;
 	color: white;
+	white-space: nowrap;
 }
 
 img {
 	margin: 2px;
-	border: 2px outset #002244;
+	border: 2px outset #001F3F;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -121,39 +125,72 @@ footer > hr {
 	margin: 30px 20px 20px 20px;
 }
 
-footer > 
-
-strong {
+footer > strong {
 	color: #FFFFFF;
 }
 
 table.metadata {
-	align-content: center;
-	padding: 16px;
+	max-width: 100%;
+	width: auto;
+	margin: auto;
+	padding: 1em;
 	background-color: #0F0F0F;
-	border: 5px ridge grey;
-	border-collapse: separate;
-	border-spacing: 10px 0px;
+	border: 5px ridge #2F2F2F;
+	border-spacing: 1em 0;
 	font-family: Courier New, Courier, monospace;
+	font-size: 90%;
+	line-height: 1.5;
 }
 
 .metadata th {
-	padding: 0px 5px;
-	font-weight: bold;
+	font-weight: 800;
 	text-align: right;
 	color: white;
 }
 
 .metadata td {
-	padding: 5px 0px;
 	text-align: left;
 }
 
 main ul li {
-	padding: 2pt;
+	padding: 0.5ex;
 }
 
 main ol li {
-	padding: 2pt;
+	padding: 0.5ex;
 }
-	
+
+table {
+	min-width: calc(100% - 2em);
+	margin: 2em auto 0 auto;
+	background-color: black;
+	padding: 1px;
+	border: 3px ridge #2F2F2F;
+	text-align: center;
+	vertical-align: center;
+}
+
+thead {
+	font-family: Helvetica, sans-serif;
+	color: white;
+	background-color: #423251;
+}
+
+tbody {
+	font-family: Utopia, Palatino, serif;
+	color: white;
+	background-color: #0F0F0F;
+}
+
+thead th, thead td {
+	padding: 0.5em;
+}
+
+
+tbody th, tbody td {
+	padding: 0.4em;
+}
+
+th {
+	font-weight: bold;
+}
