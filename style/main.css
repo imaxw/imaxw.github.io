@@ -194,3 +194,23 @@ tbody th, tbody td {
 th {
 	font-weight: bold;
 }
+
+
+.good {
+	font-weight: bold;
+	text-transform: uppercase;
+	color: lime;
+}
+
+.okay {
+	font-weight: bold;
+	text-transform: uppercase;
+	color: yellow;
+}
+
+
+.bad {
+	font-weight: bold;
+	text-transform: uppercase;
+	color: red;
+}
