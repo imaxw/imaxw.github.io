@@ -1,2 +1,4 @@
 #Files created by WIndows IIS in local testing
 web.config
+*.swp
+
